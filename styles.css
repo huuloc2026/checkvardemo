@@ -1,66 +1,130 @@
 body {
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #ff77ff, #00ccff);
+  font-family: "Courier New", Courier, monospace; /* Phông chữ retro */
+  color: #ffffff; /* Màu chữ trắng để tương phản với nền */
+  overflow-x: hidden; /* Ngăn chặn cuộn ngang */
 }
 
 .container {
-  margin-top: 30px;
+  margin: 30px auto;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 40px; /* Bo góc mạnh hơn */
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3); /* Hiệu ứng đổ bóng nhẹ */
+  background: rgba(255, 255, 255, 0.1); /* Nền bán trong suốt */
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.15); /* Nền mờ cho header */
+  color: white;
+  padding: 20px;
+  border-radius: 15px; /* Bo góc cho header */
+  margin-bottom: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px); /* Hiệu ứng làm mờ nền */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Viền trắng mờ */
+}
+
+.header-title {
+  font-size: 32px; /* Kích thước chữ lớn hơn */
+  margin: 0;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Hiệu ứng bóng chữ */
+}
+
+.header-subtitle {
+  font-size: 24px; /* Kích thước chữ tiêu đề phụ */
+  margin: 10px 0 5px;
+}
+
+.header-note,
+.header-disclaimer {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.header-warning {
+  font-size: 22px;
+  margin: 5px 0;
+  font-weight: bold;
+  color: red; /* Màu vàng cho cảnh báo */
+  -webkit-text-stroke: 0.5px yellow; /* Đường viền màu đen cho chữ cảnh báo */
 }
 
 .search-container {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 select,
 input {
   margin-right: 10px;
+  padding: 10px;
+  border: 2px solid #ffffff; /* Viền trắng */
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.3); /* Nền bán trong suốt */
+  color: white; /* Màu chữ trắng */
+  transition: background 0.3s, border-color 0.3s; /* Hiệu ứng chuyển đổi mượt mà */
 }
 
-/* Nút tìm kiếm */
-.btn-blue {
-  background-color: #007bff; /* Màu xanh */
+input:focus,
+select:focus {
+  background: rgba(255, 255, 255, 0.5); /* Nền sáng hơn khi focus */
+  border-color: #ffcc00; /* Màu viền vàng khi focus */
+}
+
+.btn {
+  background: linear-gradient(45deg, #ff77ff, #00ccff);
   color: white;
   border: none;
-  border-radius: 0.25rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s; /* Hiệu ứng chuyển động và đổ bóng */
 }
 
-.btn-blue:hover {
-  background-color: #0056b3; /* Màu xanh đậm khi hover */
+.btn:hover {
+  transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Đổ bóng khi hover */
+  background: linear-gradient(
+    45deg,
+    #00ccff,
+    #ff77ff
+  ); /* Đảo ngược màu gradient khi hover */
 }
 
-/* Thêm các kiểu cho bảng */
-.table {
+table {
+  width: 100%;
+  border-collapse: collapse;
   margin-top: 20px;
-  border-collapse: collapse; /* Kết hợp các đường biên */
-  width: 100%; /* Để bảng chiếm toàn bộ chiều rộng */
+  backdrop-filter: blur(5px); /* Hiệu ứng làm mờ nền cho bảng */
 }
 
-.table th,
-.table td {
-  border: 1px solid #dee2e6; /* Đường viền cho các ô */
-  padding: 10px; /* Khoảng cách bên trong các ô */
-  text-align: left; /* Căn trái nội dung */
-  vertical-align: middle; /* Căn giữa theo chiều dọc */
-  font-size: 1rem; /* Kích thước chữ đồng đều cho tất cả các ô */
-  white-space: nowrap; /* Ngăn không cho xuống dòng */
+th,
+td {
+  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  text-align: left;
+  transition: background 0.3s; /* Hiệu ứng chuyển đổi cho ô bảng */
 }
 
-/* Định dạng cho tiêu đề */
-.table th {
-  background-color: #007bff; /* Màu nền cho tiêu đề */
-  color: white; /* Màu chữ cho tiêu đề */
-  font-weight: bold; /* Chữ in đậm */
+th {
+  background: rgba(255, 255, 255, 0.2);
+  color: white; /* Màu vàng cho tiêu đề bảng */
 }
 
-/* Hiệu ứng hover cho hàng trong bảng */
-.table tbody tr:hover {
-  background-color: #e9ecef; /* Màu nền khi hover */
+tr:hover {
+  background: rgba(255, 255, 255, 0.3); /* Nền sáng hơn khi hover trên dòng */
+  color: #000; /* Màu chữ đen khi hover */
 }
 
-/* Định dạng phân trang */
 .pagination {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.pagination button {
-  min-width: 100px; /* Đảm bảo nút phân trang có chiều rộng tối thiểu */
+.align-self-center {
+  align-self: center;
+  margin: 0 10px;
 }
