@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm kiếm thông tin</title>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-DAFqR9Vn2F0e1In+U0MT7gco1hxM0yS0zT6mZ8mZ4ihOCiW8x7AYaU+KbePHDxC0"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .container {
+        margin-top: 30px;
+      }
+      .search-container {
+        margin-bottom: 20px;
+      }
+      select,
+      input {
+        margin-right: 10px;
+      }
+      .btn-blue {
+        background-color: #007bff; /* Màu xanh */
+        color: white;
+      }
+      .btn-blue:hover {
+        background-color: #0056b3; /* Màu xanh đậm khi hover */
+      }
+      table {
+      }
+      .pagination {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Tìm kiếm thông tin</h1>
+      <div class="search-container text-center">
+        <select id="searchDate" class="form-select" aria-label="Chọn ngày">
+          <option value="">Chọn ngày</option>
+          <!-- Các tùy chọn ngày sẽ được thêm vào đây từ JavaScript -->
+        </select>
+        <input
+          type="text"
+          id="searchNo"
+          class="form-control"
+          placeholder="Số tham chiếu"
+          style="display: inline-block; width: auto"
+        />
+        <input
+          type="text"
+          id="searchAmount"
+          class="form-control"
+          placeholder="Số tiền"
+          style="display: inline-block; width: auto"
+        />
+        <input
+          type="text"
+          id="searchContent"
+          class="form-control"
+          placeholder="Nội dung"
+          style="display: inline-block; width: auto"
+        />
+        <button id="searchButton" class="btn btn-blue">Tìm kiếm</button>
+      </div>
+      <table
+        class="table table-striped table-bordered table-hover"
+        id="dataTable"
+      >
+        <thead class="table-light">
+          <tr>
+            <th>Ngày</th>
+            <th>Số tham chiếu</th>
+            <th>Số tiền</th>
+            <th>Nội dung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dữ liệu sẽ được thêm vào đây -->
+        </tbody>
+      </table>
+      <div class="pagination d-flex justify-content-center">
+        <button id="prevPage" class="btn btn-blue me-2" disabled>
+          Trang trước
+        </button>
+        <span id="pageInfo" class="align-self-center"></span>
+        <button id="nextPage" class="btn btn-blue ms-2">Trang sau</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

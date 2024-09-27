@@ -1,0 +1,66 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+select,
+input {
+  margin-right: 10px;
+}
+
+/* Nút tìm kiếm */
+.btn-blue {
+  background-color: #007bff; /* Màu xanh */
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.btn-blue:hover {
+  background-color: #0056b3; /* Màu xanh đậm khi hover */
+}
+
+/* Thêm các kiểu cho bảng */
+.table {
+  margin-top: 20px;
+  border-collapse: collapse; /* Kết hợp các đường biên */
+  width: 100%; /* Để bảng chiếm toàn bộ chiều rộng */
+}
+
+.table th,
+.table td {
+  border: 1px solid #dee2e6; /* Đường viền cho các ô */
+  padding: 10px; /* Khoảng cách bên trong các ô */
+  text-align: left; /* Căn trái nội dung */
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+  font-size: 1rem; /* Kích thước chữ đồng đều cho tất cả các ô */
+  white-space: nowrap; /* Ngăn không cho xuống dòng */
+}
+
+/* Định dạng cho tiêu đề */
+.table th {
+  background-color: #007bff; /* Màu nền cho tiêu đề */
+  color: white; /* Màu chữ cho tiêu đề */
+  font-weight: bold; /* Chữ in đậm */
+}
+
+/* Hiệu ứng hover cho hàng trong bảng */
+.table tbody tr:hover {
+  background-color: #e9ecef; /* Màu nền khi hover */
+}
+
+/* Định dạng phân trang */
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination button {
+  min-width: 100px; /* Đảm bảo nút phân trang có chiều rộng tối thiểu */
+}
